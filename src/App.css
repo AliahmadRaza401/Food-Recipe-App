@@ -1,0 +1,45 @@
+.App {
+  text-align: center;
+}
+
+/********************** Header ********************/
+.Header {
+  background-color: #ff3300;
+  padding: 5% 0% 5% 0%;
+  color: white;
+}
+.logo{
+  font-size: 100px;
+}
+div#mainCard {
+  background-color: #17a2b8ba;
+  margin-top: 10%;
+}
+.img-fluid {
+  max-width: 85%;
+  height: auto;
+}
+button.btn.btn-info {
+  padding: 0% 31% 0% 31%;
+  font-weight: bold;
+}
+
+@media (max-width: 768px){
+  .logo {
+    font-size: 55px;
+}
+h1.display-1 {
+  margin-bottom: 1%;
+  font-size: 288%;
+  font-weight: 500;
+}
+input.form-control {
+  margin: 7% -30% 0% -37%;
+}
+button.btn.btn-info {
+  margin: 16% 10% 0% 91%;
+}
+img.img-fluid.w-60.mx-auto.rounded-circle {
+  width: 43%;
+}
+}
