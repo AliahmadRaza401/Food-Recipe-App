@@ -3,10 +3,12 @@ import './App.css';
 import Header from './Components/Header';
 import Recipe from "./Components/Recipe";
 import Axios from "axios";
+import {Spinner} from 'react-bootstrap';
 
 function App() {
   const [search, setSearch] = useState("");
   const [recipe, setRecipe] = useState ([]);
+  const [Loading, setLoading] = useState(false);
 
   const APP_ID = "112007ea"; 
   const APP_KEY = "991dc58b5cccab4f24e87eb6a1468874"; 
@@ -16,13 +18,22 @@ function App() {
   },[]);
 
   const getRecipes = async () => {
-    const result = await Axios.get (
+    await Axios.get (
       `https://api.edamam.com/search?q=${search}&app_id=${APP_ID}&app_key=${APP_KEY}`
-    );
+    )
+    .then ( (responce) => {
+      console.log(responce);
+      setRecipe(responce.data.hits);
+    })
+    .catch ( (Error) => {
+      console.log("Not Found Try Again Plzzzzzzzzzzzzzzzz");
+      
+      return;
+    })
     
-    setRecipe(result.data.hits);
+    setLoading(true);  
   };
-
+  
   const onSearchClick = () => {
     getRecipes();
     console.log("btn clicked");
@@ -43,7 +54,12 @@ function App() {
           />
 
        <div className="container">
-       <Recipe recipe = {recipe} />
+         { Loading ? <Recipe recipe = {recipe} /> : 
+         
+         <Spinner animation="grow" variant="secondary" />
+         }
+       
+       
        </div>
      
     </div>

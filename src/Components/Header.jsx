@@ -5,9 +5,9 @@ const Header = (props) => {
      <div className="Header">
        <h1 className="display-1">
          <span class="material-icons logo ">
-            fastfood
+            fastfoodsdfddddddddddddddddddddd
          </span>
-          Food Recipe</h1>
+         sdfffffffffffffffff</h1>
        <div class="input-group mb-3 w-50 m-auto">
           <input type="text" class="form-control " placeholder="Search your Recipe..."
             value={props.search}
