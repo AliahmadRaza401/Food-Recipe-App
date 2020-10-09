@@ -4,6 +4,7 @@ import Header from './Components/Header';
 import Recipe from "./Components/Recipe";
 import Axios from "axios";
 import {Spinner} from 'react-bootstrap';
+import 'semantic-ui-css/semantic.min.css';
 
 function App() {
   const [search, setSearch] = useState("");
@@ -59,9 +60,7 @@ function App() {
          <Spinner animation="grow" variant="secondary" />
          }
        
-       
-       </div>
-     
+       </div>     
     </div>
   );
 }

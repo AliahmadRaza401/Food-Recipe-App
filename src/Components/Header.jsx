@@ -5,18 +5,16 @@ const Header = (props) => {
      <div className="Header">
        <h1 className="display-1">
          <span class="material-icons logo ">
-            fastfoodsdfddddddddddddddddddddd
+           fastfood
          </span>
-         sdfffffffffffffffff</h1>
-       <div class="input-group mb-3 w-50 m-auto">
-          <input type="text" class="form-control " placeholder="Search your Recipe..."
-            value={props.search}
-            onChange={props.onInputChange}
-          />
-          <div class="input-group-append">
-          <button type="button" class="btn btn-info" onClick={props.onSearchClick} >Search</button>
-       </div>
-      </div>
+         Food Recipe</h1>
+       <div class="ui action input ">
+            <input type="text" placeholder="Search your Recipe..."
+               value={props.search}
+               onChange={props.onInputChange}
+            />
+            <button class="ui button" color='teal' onClick={props.onSearchClick}>Search</button>
+        </div>
      </div>
    );
 };

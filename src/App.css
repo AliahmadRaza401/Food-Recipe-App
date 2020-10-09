@@ -11,6 +11,15 @@
 .logo{
   font-size: 100px;
 }
+.ui.input {
+  font-size: 1em;
+  width: 50%;
+  margin: auto;
+}
+input[type="text"] {
+  width: 50%;
+}
+
 div#mainCard {
   background-color: #17a2b8ba;
   margin-top: 10%;
@@ -32,14 +41,18 @@ h1.display-1 {
   margin-bottom: 1%;
   font-size: 288%;
   font-weight: 500;
-}
-input.form-control {
-  margin: 7% -30% 0% -37%;
-}
-button.btn.btn-info {
-  margin: 16% 10% 0% 91%;
+  margin-left: -12%;
 }
 img.img-fluid.w-60.mx-auto.rounded-circle {
   width: 43%;
 }
+.ui.input {
+  font-size: 1em;
+  width: 75%;
+  margin: auto;
+}
+.ui.action.input {
+  margin-right: 13%;
+}
+
 }
